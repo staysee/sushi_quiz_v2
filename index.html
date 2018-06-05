@@ -19,12 +19,12 @@
 
   <main role="main">
   <!-- Start Page -->
-    <section id="start-page" role="region">
+    <section id="start-container" role="region">
         <div class="card welcome">
           <h2>Start Page</h2>
           <p>Do you love sushi? Are you sure you know what you're eating? <br>Alright sushi master...let's see how you roll!</p>
 
-          <button role="button">Start</button>
+          <button class="js-play-button" role="button">Start</button>
         </div>
     </section>
 
@@ -53,7 +53,7 @@
             <input type="radio" name="option" value="" required>Answer Choice 4
           </label>
           <br>
-          <button type="submit" role="button">Submit Answer</button>
+          <button class="js-submit-button" type="submit" role="button">Submit Answer</button>
           </fieldset>
         </form>
       </div>
@@ -64,7 +64,7 @@
       <h2>Feedback Page</h2>
       <p>Correct! Repeat the correct answer.</p>
       <p>Incorrect! State the correct answer.</p>
-      <button type="submit" role="button">Next Question</button>
+      <button class="js-next-button" type="submit" role="button">Next Question</button>
     </section>
 
   <!-- Final Page -->
@@ -72,7 +72,7 @@
         <h2>Final Page</h2>
         <img id="end-image" src="" alt="">
         <p class="end-score">Congratualations sushi master! You got 10 out of 10 points!</p>
-        <button type="submit" role="button">PLAY AGAIN</button>
+        <button class="js-restart-button" type="submit" role="button">PLAY AGAIN</button>
     </section>
 
   </main>
