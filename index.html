@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sushi Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Style Sheet -->
+  <link rel="stylesheet" type="text/css" href="">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Gorditas:700" rel="stylesheet">
+</head>
+<body>
+
+  <header role="banner">
+    <div class="title">
+      <h1>Sushi Quiz</h1>
+    </div>
+  <header>
+
+  <main role="main">
+  <!-- Start Page -->
+    <section id="start-page" role="region">
+        <div class="card welcome">
+          <h2>Start Page</h2>
+          <p>Do you love sushi? Are you sure you know what you're eating? <br>Alright sushi master...let's see how you roll!</p>
+
+          <button role="button">Start</button>
+        </div>
+    </section>
+
+  <!-- Question Page -->
+    <section id="quiz-container" role="region">
+      <div class="card">
+        <h2>Question Page</h2>
+              <p class="question-number">Q: 1 of 10</p>
+              <p class="scores">Correct: 0, Incorrect: 0</p>
+        <form id="quiz-form" action="#" method="">
+          <fieldset name="question-page">
+            <legend class="question-area">This is where the questions go</legend>
+          <label class="answerChoice">
+            <input type="radio" name="option" value="" required>Answer Choice 1
+          </label>
+          <br>
+          <label class="answerChoice">
+            <input type="radio" name="option" value="" required>Answer Choice 2
+          </label>
+          <br>
+          <label class="answerChoice">
+            <input type="radio" name="option" value="" required>Answer Choice 3
+          </label>
+          <br>
+          <label class="answerChoice">
+            <input type="radio" name="option" value="" required>Answer Choice 4
+          </label>
+          <br>
+          <button type="submit" role="button">Submit Answer</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+  <!-- Feedback Page -->
+    <section id="feedback-container" role="region">
+      <h2>Feedback Page</h2>
+      <p>Correct! Repeat the correct answer.</p>
+      <p>Incorrect! State the correct answer.</p>
+      <button type="submit" role="button">Next Question</button>
+    </section>
+
+  <!-- Final Page -->
+    <section id="endgame-container" role="region">
+        <h2>Final Page</h2>
+        <img id="end-image" src="" alt="">
+        <p class="end-score">Congratualations sushi master! You got 10 out of 10 points!</p>
+        <button type="submit" role="button">PLAY AGAIN</button>
+    </section>
+
+  </main>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- JavaScript -->
+<script type="text/javascript" src=""></script>
+</body>
+</html>
