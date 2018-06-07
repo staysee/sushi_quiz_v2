@@ -14,14 +14,17 @@
   <header role="banner">
     <div class="title">
       <h1>Title</h1>
+      <div class="score-board hidden">
+        <p class="question-number"></p>
+        <p class="scores"></p>
+      </div>
     </div>
   <header>
 
   <main role="main">
   <!-- Start Page -->
     <section id="start-container" class="" role="region">
-        <div class="card welcome">
-          <h2>Start Page</h2>
+        <div class="card">
           <p>Do you love sushi? Are you sure you know what you're eating? <br>Alright sushi master...let's see how you roll!</p>
 
           <button class="js-play-button" role="button">Start</button>
@@ -31,13 +34,12 @@
   <!-- Question Page -->
     <section id="quiz-container" class="hidden" role="region">
       <div class="card">
-        <h2>Question Page</h2>
-              <p class="question-number">Q: ? of 10</p>
-              <p class="scores">Correct: ?, Incorrect: ?</p>
         <form id="quiz-form" action="#" method="">
           <fieldset name="question-page">
             <legend class="question-area">This is where the questions go</legend>
-          <button class="js-submit-button" type="submit" role="button">Submit Answer</button>
+            <div class="js-answer-choices"></div>
+
+            <button class="js-submit-button" type="submit" role="button">Submit Answer</button>
           </fieldset>
         </form>
       </div>
@@ -45,9 +47,7 @@
 
   <!-- Feedback Page -->
     <section id="feedback-container" class="hidden" role="region">
-      <h2>Feedback Page</h2>
-      <p>Correct! Repeat the correct answer.</p>
-      <p>Incorrect! State the correct answer.</p>
+      <h3 class="feedback"></h3>
       <button class="js-next-button" type="submit" role="button">Next Question</button>
     </section>
 
