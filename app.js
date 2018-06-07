@@ -8,15 +8,22 @@ let incorrectScore = 0;
 //game starts
 function startGame(){
 	$('#start-container').addClass("hidden");
+  $('#quiz-container').removeClass("hidden");
+  render();
 }
 
 //display question
 function displayQuestion(){
+  const questionNumber = $('.question-number');
+  const questionArea = $('.question-area');
+  questionArea.html(`${STORE[0].question}`);
+
+  console.log(`Current question is: ${STORE[0].question}`);
 
 }
 //display answer choices
 function displayAnswerChoices(){
-
+  const
 }
 
 function updateScore(){
@@ -42,6 +49,9 @@ function answerIsRight(){
 
 }
 
+function render(){
+
+}
 
 // EVENT HANDLERS
 
