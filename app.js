@@ -7,7 +7,7 @@ let incorrectScore = 0;
 
 //game starts
 function startGame(){
-
+	$('#start-container').addClass("hidden");
 }
 
 //display question
@@ -19,10 +19,9 @@ function displayAnswerChoices(){
 
 }
 
-function displayScore(){
+function updateScore(){
 
 }
-
 
 //check for correct answer
 function checkCorrectAnswer(){
@@ -48,7 +47,7 @@ function answerIsRight(){
 
 //user click play button
 function handleStart(){
-
+	$('#start-container').on('click', '.js-play-button', startGame)
 }
 
 //new game (play again)
@@ -66,6 +65,12 @@ function handleNext(){
 //update question number
 }
 
+
+
 function createQuiz(){
 	//all the functions to run on load
+	console.log('app is running');
+	handleStart();
 }
+
+$(createQuiz);

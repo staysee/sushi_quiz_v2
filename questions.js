@@ -4,7 +4,7 @@ const STORE = [
 	{
 		question: "What is known as Japanese horseradish?",
 		answers: [
-				"wasabi".
+				"wasabi",
 				"nigori",
 				"mooli",
 				"ninjin"
@@ -30,6 +30,7 @@ const STORE = [
 				"seaweed and rice"
 		],
 		correctAnswer: "rice with vinegar"
+	},
 	{
 		question: "Which is not an egg?",
 		answers: [
@@ -81,7 +82,7 @@ const STORE = [
 		correctAnswer: "gonads"
 	},
 	{
-		question: "Which of these is not tuna?"
+		question: "Which of these is not tuna?",
 		answers: [
 				"Skipjack",
 				"Albacore",
@@ -91,7 +92,7 @@ const STORE = [
 		correctAnswer: "Hamachi"
 	},
 	{
-		question: "Who is often considered the \"world\'s greatest\" sushi chef?"
+		question: "Who is often considered the \"world\'s greatest\" sushi chef?",
 		answers: [
 				"Daisuke Nakazawa",
 				"Nobu Matsuhisa",
