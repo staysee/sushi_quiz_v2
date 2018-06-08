@@ -4,45 +4,50 @@
   <title>Sushi Quiz</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Style Sheet -->
-  <link rel="stylesheet" type="text/css" href="style.css">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Gorditas:700" rel="stylesheet">
+  <!-- Style Sheet -->
+  <link rel="stylesheet" type="text/css" href="css/float-grid.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
   <header role="banner">
-    <div class="title">
-      <h1>Title</h1>
-      <div class="score-board hidden">
-        <p class="question-number"></p>
-        <p class="scores"></p>
+    <div class="row">
+      <div class="col-8">
+        <div class="title-scores">
+          <h1>Sushi Quiz</h1>
+          <div class="score-board hidden">
+            <p class="question-number"></p>
+            <p class="scores"></p>
+          </div>
+        </div>
       </div>
     </div>
   <header>
 
   <main role="main">
   <!-- Start Page -->
-    <section id="start-container" class="" role="region">
-        <div class="card">
-          <p>Do you love sushi? Are you sure you know what you're eating? <br>Alright sushi master...let's see how you roll!</p>
+    <div class="row">
+    <div class="col-8">
+      <section id="start-container" class="" role="region">
+        <p>Do you love sushi? Are you sure you know what you're eating? <br>Alright sushi master...let's see how you roll!</p>
 
-          <button class="js-play-button" role="button">Start</button>
-        </div>
-    </section>
+        <button class="js-play-button" role="button">Start</button>
+      </section>
+    </div>
+    </div>
 
   <!-- Question Page -->
     <section id="quiz-container" class="hidden" role="region">
-      <div class="card">
-        <form id="quiz-form" action="#" method="">
-          <fieldset name="question-page">
-            <legend class="question-area">This is where the questions go</legend>
-            <div class="js-answer-choices"></div>
+      <form id="quiz-form" action="#" method="">
+        <fieldset name="question-page">
+          <legend class="question-area">This is where the questions go</legend>
+          <div class="js-answer-choices"></div>
 
-            <button class="js-submit-button" type="submit" role="button">Submit Answer</button>
-          </fieldset>
-        </form>
-      </div>
+          <button class="js-submit-button" type="submit" role="button">Submit Answer</button>
+        </fieldset>
+      </form>
     </section>
 
   <!-- Feedback Page -->
@@ -64,7 +69,7 @@
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- JavaScript -->
-<script type="text/javascript" src="questions.js"></script>
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="js/questions.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
