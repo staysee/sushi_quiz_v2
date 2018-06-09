@@ -7,14 +7,13 @@
  }
 
 body {
-  font-family: 'Coming Soon', cursive;
+  font-family: 'Jua', sans-serif;
   font-size: 14px;
   background-color: #7F7F7F;
 }
 
 h1 {
   text-align: center;
-  font-family: 'Gorditas', cursive;
 }
 
 #start-container {

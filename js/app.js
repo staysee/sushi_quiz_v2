@@ -38,20 +38,22 @@ function renderQuestion(){
 
 //get all answer choices
 function generateAnswerChoices(){
-	return ` 
-	    <label class="answerChoice">
-	    	<input type="radio" name="option" value="${STORE[currentQuestion].answers[0]}" required>${STORE[currentQuestion].answers[0]}
-	    </label>
-	    <label class="answerChoice">
-	    	<input type="radio" name="option" value="${STORE[currentQuestion].answers[1]}" required>${STORE[currentQuestion].answers[1]}
-	    </label>
-	    <label class="answerChoice">
-	    	<input type="radio" name="option" value="${STORE[currentQuestion].answers[2]}" required>${STORE[currentQuestion].answers[2]}
-	    </label>
-	    <label class="answerChoice">
-	    	<input type="radio" name="option" value="${STORE[currentQuestion].answers[3]}" required>${STORE[currentQuestion].answers[3]}
-	    </label>		 
-	`
+  if (currentQuestion < STORE.length){
+  	return `
+  	    <label class="answerChoice">
+  	    	<input type="radio" name="option" value="${STORE[currentQuestion].answers[0]}" required>${STORE[currentQuestion].answers[0]}
+  	    </label>
+  	    <label class="answerChoice">
+  	    	<input type="radio" name="option" value="${STORE[currentQuestion].answers[1]}" required>${STORE[currentQuestion].answers[1]}
+  	    </label>
+  	    <label class="answerChoice">
+  	    	<input type="radio" name="option" value="${STORE[currentQuestion].answers[2]}" required>${STORE[currentQuestion].answers[2]}
+  	    </label>
+  	    <label class="answerChoice">
+  	    	<input type="radio" name="option" value="${STORE[currentQuestion].answers[3]}" required>${STORE[currentQuestion].answers[3]}
+  	    </label>
+  	`
+  }
 }
 
 //textual feedback for wrong answer

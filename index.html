@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Gorditas:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
   <!-- Style Sheet -->
   <link rel="stylesheet" type="text/css" href="css/float-grid.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -39,30 +39,41 @@
     </div>
 
   <!-- Question Page -->
-    <section id="quiz-container" class="hidden" role="region">
-      <form id="quiz-form" action="#" method="">
-        <fieldset name="question-page">
-          <legend class="question-area">This is where the questions go</legend>
-          <div class="js-answer-choices"></div>
-
-          <button class="js-submit-button" type="submit" role="button">Submit Answer</button>
-        </fieldset>
-      </form>
-    </section>
+    <div class="row">
+    <div class="col-8">
+      <section id="quiz-container" class="hidden" role="region">
+        <form id="quiz-form" action="#">
+          <fieldset name="question-page">
+            <legend class="question-area">This is where the questions go</legend>
+            <div class="js-answer-choices"></div>
+          </fieldset>
+        <button class="js-submit-button" type="submit" role="button">Submit Answer</button>
+        </form>
+      </section>
+    </div>
+    </div>
 
   <!-- Feedback Page -->
-    <section id="feedback-container" class="hidden" role="region">
-      <h3 class="feedback"></h3>
-      <button class="js-next-button" type="submit" role="button">Next Question</button>
-    </section>
+    <div class="row">
+    <div class="col-8">
+      <section id="feedback-container" class="hidden" role="region">
+        <h3 class="feedback"></h3>
+        <button class="js-next-button" type="button" role="button">Next Question</button>
+      </section>
+    </div>
+    </div>
 
   <!-- Final Page -->
-    <section id="endgame-container" class="hidden" role="region">
-        <h2>Final Page</h2>
-        <img id="end-image" src="" alt="">
-        <p class="end-score">Congratualations sushi master! You got 10 out of 10 points!</p>
-        <button class="js-restart-button" type="submit" role="button">PLAY AGAIN</button>
-    </section>
+    <div class="row">
+    <div class="col-8">
+      <section id="endgame-container" class="hidden" role="region">
+          <h2>Final Page</h2>
+          <img id="end-image" src="" alt="">
+          <p class="end-score">Congratualations sushi master! You got 10 out of 10 points!</p>
+          <button class="js-restart-button" type="button" role="button">PLAY AGAIN</button>
+      </section>
+    </div>
+    </div>
 
   </main>
 
