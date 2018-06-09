@@ -16,6 +16,13 @@ h1 {
   text-align: center;
 }
 
-#start-container {
+section {
   background-color: white;
+  padding: 10px;
+  height: 50%;
+  font-size: 1.5em;
+}
+
+#feedback-container {
+
 }
