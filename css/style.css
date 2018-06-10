@@ -9,20 +9,89 @@
 body {
   font-family: 'Jua', sans-serif;
   font-size: 14px;
-  background-color: #7F7F7F;
+  background: url('../img/noise-bg.png');
+  background-color: #354c54;
+  background-repeat: repeat;
+  color: #d6d6bb;
 }
 
 h1 {
   text-align: center;
+  font-size: 4em;
 }
 
 section {
-  background-color: white;
-  padding: 10px;
+  background-color: #092d2a;
+  padding: 20px;
   height: 50%;
   font-size: 1.5em;
+  border-radius: 5px;
+  box-shadow: 3px 4px #0b1f1d;
 }
 
-#feedback-container {
+button {
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
 
+/*scoreboard*/
+.title-scores {
+  text-align: center;
+}
+
+.question-number {
+  float: left;
+  margin-left: 10px;
+}
+
+.scores {
+  float: right;
+  margin-right: 10px;
+}
+
+/*start*/
+.wasaab {
+  float: left;
+  display: block;
+  width: 145px;
+  margin-right: 15px;
+}
+
+/*quizcontainer*/
+label {
+  display: flex;
+}
+
+input {
+  margin-right: 10px;
+}
+
+
+/*feedback*/
+.right-answer {
+  background-color: #3c733c;
+}
+
+.wrong-answer {
+  background-color: #8c0b0b;
+}
+
+.feedback {
+  color: white;
+  text-align: center;
+}
+
+
+/*footer*/
+footer img {
+  display: block;
+  height: 200px;
+  margin: 20px auto 0px auto;
 }

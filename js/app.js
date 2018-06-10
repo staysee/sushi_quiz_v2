@@ -20,11 +20,10 @@ function renderAnswerChoices(){
 }
 
 function renderQuestion(){
-	const questionNumber = $('.question-number');
 	const questionArea = $('.question-area');
+  $('.question-number').html(`Question ${currentQuestion+1} of 10`);
 
 	if (currentQuestion < STORE.length){
-		questionNumber.html()
 		questionArea.html(`${STORE[currentQuestion].question}`);
 
 		console.log(`Current question is: ${STORE[currentQuestion].question}`);
@@ -59,13 +58,15 @@ function generateAnswerChoices(){
 //textual feedback for wrong answer
 function answerIsWrong(){
 	console.log('WRONG!');
-	$('.feedback').html(`<strong>WRONG!</strong> The correct answer is: ${STORE[currentQuestion].correctAnswer}`)
+  $('#feedback-container').addClass("wrong-answer");
+	$('.feedback').html(`<strong>WRONG!</strong><br>The correct answer is: ${STORE[currentQuestion].correctAnswer}`)
 	incorrectScore++;
 }
 
 //textual feedback for right answer
 function answerIsRight(){
 	console.log('Answer is Correct!');
+  $('#feedback-container').addClass("right-answer");
 	$('.feedback').html(`${STORE[currentQuestion].correctAnswer} is <strong>CORRECT!</strong>`)
 	correctScore++;
 }
@@ -88,7 +89,7 @@ function updateScore(){
 
 function updateQuestionNumber(){
 	currentQuestion++;
-	questionNumber.html(`Question ${currentQuestion+1} of 10`);
+  $('.question-number').html(`Question ${currentQuestion+1} of 10`);
 }
 
 function endGame(){
@@ -129,9 +130,10 @@ function handleNext(){
 	$('#feedback-container').on('click', '.js-next-button', function(event){
 		// event.preventDefault();
 		console.log('Next question!')
-		$('#feedback-container').addClass("hidden");
+    $('#feedback-container').addClass("hidden");
+		$('#feedback-container').removeClass("wrong-answer right-answer");
 		$('#quiz-container').removeClass("hidden");
-		currentQuestion++;
+		updateQuestionNumber();
 		render();
 	});
 }

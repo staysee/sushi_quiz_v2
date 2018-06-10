@@ -14,7 +14,7 @@
 
   <header role="banner">
     <div class="row">
-      <div class="col-8">
+      <div class="col-10">
         <div class="title-scores">
           <h1>Sushi Quiz</h1>
           <div class="score-board hidden">
@@ -31,7 +31,8 @@
     <div class="row">
     <div class="col-10">
       <section id="start-container" class="" role="region">
-        <p>Do you love sushi? Are you sure you know what you're eating? Alright sushi master...let's see how you roll!</p>
+        <img class="wasaab" src="img/wasaab.jpg">
+        <p class="intro">Do you love sushi? Are you sure you know what you're eating? Alright sushi master...<br>...let's see how you roll!</p>
 
         <button class="js-play-button" role="button">Start</button>
       </section>
@@ -47,7 +48,7 @@
             <legend class="question-area">This is where the questions go</legend>
             <div class="js-answer-choices"></div>
           </fieldset>
-        <button class="js-submit-button" type="submit" role="button">Submit Answer</button>
+        <button class="js-submit-button" type="submit" role="button">Submit</button>
         </form>
       </section>
     </div>
@@ -58,7 +59,7 @@
     <div class="col-10">
       <section id="feedback-container" class="hidden" role="region">
         <h3 class="feedback"></h3>
-        <button class="js-next-button" type="button" role="button">Next Question</button>
+        <button class="js-next-button" type="button" role="button">Next</button>
       </section>
     </div>
     </div>
@@ -76,6 +77,10 @@
     </div>
 
   </main>
+
+  <footer role="contentinfo">
+    <img src="img/sushi_friends.png">
+  </footer>
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
