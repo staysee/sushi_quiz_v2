@@ -126,7 +126,7 @@ function handleSubmit(){
 	$('#quiz-container').on('submit', function (event){
 		event.preventDefault();
 		checkCorrectAnswer();
-		$('#quiz-container').addClass("hidden");
+		$(this).addClass("hidden");
 		$('#feedback-container').removeClass("hidden");
 	})
 
@@ -136,9 +136,8 @@ function handleSubmit(){
 function handleNext(){
 //update question number
 	$('#feedback-container').on('click', '.js-next-button', function(event){
-		// event.preventDefault();
 		console.log('Next question!')
-    $('#feedback-container').addClass("hidden");
+    	$('#feedback-container').addClass("hidden");
 		$('#feedback-container').removeClass("wrong-answer right-answer");
 		$('#quiz-container').removeClass("hidden");
 		updateQuestionNumber();
