@@ -88,7 +88,7 @@ function updateScore(){
 }
 
 function updateQuestionNumber(){
-	currentQuestion++;
+  currentQuestion++;
   $('.question-number').html(`Question ${currentQuestion+1} of 10`);
 }
 
@@ -98,9 +98,9 @@ function endGame(){
     $('#end-image').attr("alt", "cartoon sushi and ice cream celebration");
     $('.end-score').html(`Congratulations Sushi Master! <br> You scored ${correctScore} out of 10 points`);
   } else {
-    $('#end-image').attr("src", "../img/sushi_party.png");
-    $('#end-image').attr("alt", "cartoon sushi and ice cream celebration");
-    $('.end-score').html(`Congratulations Sushi Master! <br> You scored ${correctScore} out of 10 points`);
+    $('#end-image').attr("src", "img/beach_salmon.png");
+    $('#end-image').attr("alt", "cartoon salmon sushi on the beach");
+    $('.end-score').html(`Do you know what you're eating? <br> You only scored ${correctScore} out of 10 points.`);
   }
   $('#endgame-container').removeClass("hidden");
 }
