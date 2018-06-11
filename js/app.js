@@ -59,7 +59,7 @@ function generateAnswerChoices(){
 function answerIsWrong(){
 	console.log('WRONG!');
   $('#feedback-container').addClass("wrong-answer");
-	$('.feedback').html(`<strong>WRONG!</strong><br>The correct answer is: ${STORE[currentQuestion].correctAnswer}`)
+	$('.feedback').html(`<strong>WRONG!</strong><br>The correct answer is ${STORE[currentQuestion].correctAnswer}`)
 	incorrectScore++;
 }
 
@@ -93,8 +93,16 @@ function updateQuestionNumber(){
 }
 
 function endGame(){
-	$('#endgame-container').removeClass("hidden");
-	$('.end-score').html(`You scored ${correctScore} out of 10 points`);
+  if (correctScore >= 8){
+    $('#end-image').attr("src", "img/sushi_party.png");
+    $('#end-image').attr("alt", "cartoon sushi and ice cream celebration");
+    $('.end-score').html(`Congratulations Sushi Master! <br> You scored ${correctScore} out of 10 points`);
+  } else {
+    $('#end-image').attr("src", "../img/sushi_party.png");
+    $('#end-image').attr("alt", "cartoon sushi and ice cream celebration");
+    $('.end-score').html(`Congratulations Sushi Master! <br> You scored ${correctScore} out of 10 points`);
+  }
+  $('#endgame-container').removeClass("hidden");
 }
 
 
@@ -115,7 +123,7 @@ function newGame(){
 
 //user click to submit answerchoice
 function handleSubmit(){
-	$('#quiz-container').on('click', '.js-submit-button', function (event){
+	$('#quiz-container').on('submit', function (event){
 		event.preventDefault();
 		checkCorrectAnswer();
 		$('#quiz-container').addClass("hidden");
