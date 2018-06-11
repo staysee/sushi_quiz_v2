@@ -61,6 +61,7 @@
   /* 4 columns, 4/12 in % */
   .col-4 {
     width: 33.33%;
+    min-width: 250px;
   }
 
   /* 6 columns, 6/12 in % */

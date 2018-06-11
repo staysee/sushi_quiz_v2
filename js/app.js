@@ -136,12 +136,17 @@ function handleSubmit(){
 function handleNext(){
 //update question number
 	$('#feedback-container').on('click', '.js-next-button', function(event){
-		console.log('Next question!')
-    	$('#feedback-container').addClass("hidden");
-		$('#feedback-container').removeClass("wrong-answer right-answer");
-		$('#quiz-container').removeClass("hidden");
-		updateQuestionNumber();
-		render();
+      $('#feedback-container').addClass("hidden");
+		  $('#feedback-container').removeClass("wrong-answer right-answer");
+    if (currentQuestion+1 !== STORE.length){
+		  $('#quiz-container').removeClass("hidden");
+		  updateQuestionNumber();
+		  render();
+    } else {
+      updateScore();
+      endGame();
+    }
+
 	});
 }
 
