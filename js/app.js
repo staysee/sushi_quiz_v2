@@ -4,7 +4,6 @@ let currentQuestion = 0;
 let correctScore = 0;
 let incorrectScore = 0;
 
-//game starts
 function startGame(){
 	$('#start-container').addClass("hidden");
 	$('#quiz-container').removeClass("hidden");
@@ -12,11 +11,13 @@ function startGame(){
 	render();
 }
 
+function updateScore(){
+  $('.scores').html(`Correct: ${correctScore}, Incorrect: ${incorrectScore}`);
+}
 
-//display answer choices
-function renderAnswerChoices(){
-	$('.js-answer-choices').html(generateAnswerChoices());
-	console.log('`displayAnswerChoices` running')
+function updateQuestionNumber(){
+  currentQuestion++;
+  $('.question-number').html(`Question ${currentQuestion+1} of 10`);
 }
 
 function renderQuestion(){
@@ -25,9 +26,7 @@ function renderQuestion(){
 
 	if (currentQuestion < STORE.length){
 		questionArea.html(`${STORE[currentQuestion].question}`);
-
-		console.log(`Current question is: ${STORE[currentQuestion].question}`);
-		console.log('`generateCurrentQuestion` runnning.');
+    $('.js-answer-choices').html(generateAnswerChoices());
 	} else {
 		updateScore();
 		$('#quiz-container').addClass("hidden");
@@ -35,7 +34,6 @@ function renderQuestion(){
 	}
 }
 
-//get all answer choices
 function generateAnswerChoices(){
   if (currentQuestion < STORE.length){
   	return `
@@ -55,7 +53,6 @@ function generateAnswerChoices(){
   }
 }
 
-//textual feedback for wrong answer
 function answerIsWrong(){
 	console.log('WRONG!');
   $('#feedback-container').addClass("wrong-answer");
@@ -63,7 +60,6 @@ function answerIsWrong(){
 	incorrectScore++;
 }
 
-//textual feedback for right answer
 function answerIsRight(){
 	console.log('Answer is Correct!');
   $('#feedback-container').addClass("right-answer");
@@ -71,7 +67,6 @@ function answerIsRight(){
 	correctScore++;
 }
 
-//check for correct answer
 function checkCorrectAnswer(){
 	let userAnswer = $('input:checked').val();
 	let correctAnswer = `${STORE[currentQuestion].correctAnswer}`;
@@ -80,17 +75,9 @@ function checkCorrectAnswer(){
 	} else {
 		answerIsWrong();
 	}
-
-}
-//show current question and scores
-function updateScore(){
-	$('.scores').html(`Correct: ${correctScore}, Incorrect: ${incorrectScore}`);
 }
 
-function updateQuestionNumber(){
-  currentQuestion++;
-  $('.question-number').html(`Question ${currentQuestion+1} of 10`);
-}
+
 
 function endGame(){
   if (correctScore >= 8){
@@ -107,37 +94,32 @@ function endGame(){
 
 
 
-// EVENT HANDLERS
-
-//user click play button
-function handleStart(){
-	$('#start-container').on('click', '.js-play-button', startGame)
-}
-
-//new game (play again)
+// EVENT HANDLERS //
 function newGame(){
 	$('#endgame-container').on('click', '.js-restart-button', function(event){
 		location.reload();
 	})
 }
 
-//user click to submit answerchoice
+function handleStart(){
+  $('#start-container').on('click', '.js-play-button', startGame)
+}
+
 function handleSubmit(){
 	$('#quiz-container').on('submit', function (event){
 		event.preventDefault();
 		checkCorrectAnswer();
+
 		$(this).addClass("hidden");
 		$('#feedback-container').removeClass("hidden");
 	})
-
 }
 
-//user click for next question
 function handleNext(){
-//update question number
 	$('#feedback-container').on('click', '.js-next-button', function(event){
       $('#feedback-container').addClass("hidden");
 		  $('#feedback-container').removeClass("wrong-answer right-answer");
+
     if (currentQuestion+1 !== STORE.length){
 		  $('#quiz-container').removeClass("hidden");
 		  updateQuestionNumber();
@@ -146,18 +128,16 @@ function handleNext(){
       updateScore();
       endGame();
     }
-
-	});
+	})
 }
 
+// GAME PLAY //
 function render(){
 	renderQuestion();
-	renderAnswerChoices();
 	updateScore();
 }
 
 function runQuiz(){
-	//all the functions to run on load
 	console.log('Sushi Quiz ready to roll.');
 	handleStart();
 	handleSubmit();
