@@ -11,6 +11,7 @@ function startGame(){
 	render();
 }
 
+// GAME LOGIC //
 function updateScore(){
   $('.scores').html(`Correct: ${correctScore}, Incorrect: ${incorrectScore}`);
 }
