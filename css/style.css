@@ -175,3 +175,41 @@ footer img {
   height: 200px;
   margin: 20px auto 0px auto;
 }
+
+
+/*media queries*/
+@media only screen and (max-width: 480px){
+  h1 {
+    font-size: 3em;
+  }
+
+  .wasaab {
+    float: none;
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #start-container p {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .question-number, .scores {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  legend {
+    font-size: 16px;
+  }
+  label {
+    font-size: 14px;
+  }
+
+  footer img {
+    height: 145px;
+  }
+}

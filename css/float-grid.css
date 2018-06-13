@@ -71,6 +71,7 @@
 
   .col-10{
     width: 83.3%;
+    min-width: 300px;
   }
 
   /* 12 columns, 12/12 in % */
