@@ -12,10 +12,12 @@
 
 ## Introduction
 
-Do you love sushi? Are you sure you know what you are eating? Alright sushi master...let's see how you roll!
+Do you love sushi? Are you sure you know what you are eating?
 
 Take this 10 question quiz to test your sushi knowledge.
 To prove yourself you must score 8 points or higher!
+
+ Alright sushi master...let's see how you roll!
 
 ## Technologies Used
 This sushi quiz is built with HTML, CSS, JavaScript, jQuery, GoogleFonts
