@@ -55,14 +55,12 @@ function generateAnswerChoices(){
 }
 
 function answerIsWrong(){
-	console.log('WRONG!');
   $('#feedback-container').addClass("wrong-answer");
 	$('.feedback').html(`<strong>WRONG!</strong><br>The correct answer is ${STORE[currentQuestion].correctAnswer}`)
 	incorrectScore++;
 }
 
 function answerIsRight(){
-	console.log('Answer is Correct!');
   $('#feedback-container').addClass("right-answer");
 	$('.feedback').html(`${STORE[currentQuestion].correctAnswer} is <strong>CORRECT!</strong>`)
 	correctScore++;
