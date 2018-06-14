@@ -8,9 +8,7 @@
 1. [Introduction](#introduction)
 2. [Technologies Used](#technologies-used)
 
-**Live Demo**
-[Sushi Quiz on GitHub Pages](https://staysee.github.io/sushi_quiz_v2)
-[Sushi Quiz on Repl](https://repl.it/@staysee/Sushi-Quiz)
+**Live Demo:** [GitHub Pages](https://staysee.github.io/sushi_quiz_v2) | [Repl](https://repl.it/@staysee/Sushi-Quiz)
 
 ## Introduction
 
