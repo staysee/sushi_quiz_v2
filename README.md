@@ -1,6 +1,6 @@
   
 # Sushi Quiz
-<img src="img/sushi_party.png" width=250px">
+![Sushi Ice Cream Party|20%](img/sushi_party.png)
 **Table of Contents**
 
 1. [Introduction](#introduction)
