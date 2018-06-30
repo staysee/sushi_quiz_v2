@@ -84,6 +84,7 @@ button:hover {
 
 .play-button {
   clear: both;
+  color: #2B2B2B;
 }
 
 #start-container p:nth-child(4) {
@@ -144,6 +145,7 @@ input:checked {
 
 .next-button {
    background-color: #354247;
+   color: #fbd34f;
 }
 
 .next-button:hover {
